@@ -5,9 +5,9 @@ using UnityEngine;
 public class GrassStatesManager : MonoBehaviour
 {
     GrassBaseState currentState;
-    GrassGrowingState GrowingState = new GrassGrowingState();
-    GrassWholeState WholeState = new GrassWholeState();
-    GrassDyingState DyingState = new GrassDyingState();
+    public GrassGrowingState GrowingState = new GrassGrowingState();
+    public GrassWholeState WholeState = new GrassWholeState();
+    public GrassDyingState DyingState = new GrassDyingState();
 
     // Start is called before the first frame update
     void Start()
@@ -21,5 +21,13 @@ public class GrassStatesManager : MonoBehaviour
     void Update()
     {
 
+        currentState.UpdateState(this);
+
+    }
+    
+   public void SwitchState(GrassBaseState state)
+    {
+        currentState = state;
+        state.EnterState(this);
     }
 }

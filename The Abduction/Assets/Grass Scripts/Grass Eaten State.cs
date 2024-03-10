@@ -2,17 +2,17 @@ using UnityEngine;
 
 public class GrassEatenState : GrassBaseState
 {
-    public override void EnterState(GrassStatesManager apple)
+    public override void EnterState(GrassStatesManager grass)
     {
 
     }
 
-    public override void UpdateState(GrassStatesManager apple)
+    public override void UpdateState(GrassStatesManager grass)
     {
 
     }
 
-    public override void OnCollisionEnter(GrassStatesManager apple)
+    public override void OnCollisionEnter(GrassStatesManager grass)
     {
 
     }
